@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-lg">
+    @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+    {
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Kullanici Adi</label>
+            <input type="text" name="adminuser" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Kullanici Adi</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Sifre</label>
+            <input type="password" name="adminpassword" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    }
+</div>

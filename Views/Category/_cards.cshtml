@@ -1,0 +1,31 @@
+﻿@foreach (var item in Model.Cards)
+{
+    <a href="~/Category/Details/@item.CardsId" class="col text-decoration-none">
+        <div class="card shadow-sm">
+            @if (String.IsNullOrEmpty(item.ImgSrc.ImgSrc1))
+            {
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c" />
+                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                </svg>
+            }
+            else
+            {
+                <a href="~/Category/Details/@item.CardsId">
+                    <img src="~/@item.ImgSrc.ImgSrc1" alt="@item.ImgSrc.Title" />
+                </a>
+            }
+            <div class="card-body">
+                <h5 class="card-text mb-3">@item.Title</h5>
+                <p class="text-secondary">@item.Barcode</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-body-secondary">Fiyat: @item.Price &#8378;</small>
+                    <div class="btn-group">
+                        <button type="submit" role="link" href="~/Category/Details/@item.CardsId" class="btn btn-sm btn-outline-primary">Incele</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+}

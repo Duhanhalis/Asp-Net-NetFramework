@@ -1,0 +1,160 @@
+﻿@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="py-5">
+    <div class="container">
+        <div class="row gx-5">
+            <aside class="col-lg-6">
+                <div class="border rounded-4 mb-3 d-flex justify-content-center">
+                    <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="@Model.ImgSrc.ImgSrc1">
+                        <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit" src="@Model.ImgSrc.ImgSrc1" />
+                    </a>    
+                </div>
+                <div class="d-flex justify-content-center mb-3">
+                    @{
+                        if (String.IsNullOrEmpty(Model.ImgSrc.ImgSrc1))
+                        {
+                            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" data-type="image" class="item-thumb">
+                                <img width="60" height="60" class="rounded-2" src="~/Content/@Model.ImgSrc.ImgSrc1" />
+                            </a>
+                        }
+                        else if (String.IsNullOrEmpty(Model.ImgSrc.ImgSrc2))
+                        {
+                            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" data-type="image" class="item-thumb">
+                                <img width="60" height="60" class="rounded-2" src="~/Content/@Model.ImgSrc.ImgSrc2" />
+                            </a>
+                        }
+                        else if (String.IsNullOrEmpty(Model.ImgSrc.ImgSrc3))
+                        {
+                            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" data-type="image" class="item-thumb">
+                                <img width="60" height="60" class="rounded-2" src="~/Content/@Model.ImgSrc.ImgSrc3" />
+                            </a>
+                        }
+                        else if (String.IsNullOrEmpty(Model.ImgSrc.ImgSrc4))
+                        {
+                            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" data-type="image" class="item-thumb">
+                                <img width="60" height="60" class="rounded-2" src="~/Content/@Model.ImgSrc.ImgSrc4" />
+                            </a>
+                        }
+                        else if (String.IsNullOrEmpty(Model.ImgSrc.ImgSrc5))
+                        {
+                            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" data-type="image" class="item-thumb">
+                                <img width="60" height="60" class="rounded-2" src="~/Content/@Model.ImgSrc.ImgSrc5" />
+                            </a>
+                        }
+                    }
+                </div>
+                <!-- thumbs-wrap.// -->
+                <!-- gallery-wrap .end// -->
+            </aside>
+            <main class="col-lg-6">
+                <div class="ps-lg-3">
+                    <h4 class="title text-dark">
+                        @Model.Title<br />
+                        Casual Hoodie
+                    </h4>
+                    <div class="d-flex flex-row my-3">
+                        <span class="text-muted">@Model.Stock orders</span>
+                        <span class="text-success ms-2">In stock</span>
+                    </div>
+
+                    <div class="mb-3">
+                        <span class="h5">@Model.Price</span>
+                        <span class="text-muted">/per box</span>
+                    </div>
+                    <hr />
+
+                    <div class="row mb-4">
+                        <!-- col.// -->
+                        <div class="border rounded-2 px-3 py-2 bg-white">
+                            <!-- Pills content -->
+                            <div class="tab-content" id="ex1-content">
+                                <div class="tab-pane fade show active" id="ex1-pills-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+                                    <p>
+                                        With supporting text below as a natural lead-in to additional content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                        pariatur.
+                                    </p>
+                                    <table class="table border mt-3 mb-4">
+                                        <tr>
+                                            <th class="py-2">Display:</th>
+                                            <td class="py-2">13.3-inch LED-backlit display with IPS</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="py-2">Processor capacity:</th>
+                                            <td class="py-2">2.3GHz dual-core Intel Core i5</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="py-2">Camera quality:</th>
+                                            <td class="py-2">720p FaceTime HD camera</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="py-2">Memory</th>
+                                            <td class="py-2">8 GB RAM or 16 GB RAM</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="py-2">Graphics</th>
+                                            <td class="py-2">Intel Iris Plus Graphics 640</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade mb-2" id="ex1-pills-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+                                    Tab content or sample information now <br />
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                    officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                </div>
+                                <div class="tab-pane fade mb-2" id="ex1-pills-3" role="tabpanel" aria-labelledby="ex1-tab-3">
+                                    Another tab content or sample information now <br />
+                                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                    mollit anim id est laborum.
+                                </div>
+                                <div class="tab-pane fade mb-2" id="ex1-pills-4" role="tabpanel" aria-labelledby="ex1-tab-4">
+                                    Some other tab content or sample information now <br />
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                    officia deserunt mollit anim id est laborum.
+                                </div>
+                            </div>
+                            <!-- Pills content -->
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Launch demo modal
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title" id="exampleModalLabel">Kart Id :@Model.CardsId</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h1 class="fs-3">@Model.Title</h1>
+                                            <p class="fs-5">@Model.Description</p>
+                                            <p class="fs-5 fst-italic"><i class="bi bi-telephone-forward"></i>Almak istediginiz kartti no'sunu bize soyleyin</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-outline-primary">Arama</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </main>
+        </div>
+    </div>
+</section>
